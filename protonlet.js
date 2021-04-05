@@ -4,7 +4,7 @@ var closeButton = document.createElement("div");
            document.querySelector("#protonlet-alertbox").style.display = "none"; 
         });
         var bookmarklet = document.createElement("a");
-        bookmarklet.href = "javascript:var loc=window.location.pathname.split('/').pop(); fetch('https://www.khanacademy.org/api/internal/scratchpads/'+loc).then((response) => { response.json().then((data) => { var frame = document.createElement('iframe'); frame.srcdoc = data.revision.code; frame.style='width:100%;height:100%;position:fixed;top:0;left:0;'; document.body.innerHTML = ''; document.body.appendChild(frame); }); })";
+        bookmarklet.href = "javascript:var loc=window.location.pathname.split('/').pop(); fetch('https://www.khanacademy.org/api/internal/scratchpads/'+loc).then((response) => { response.json().then((data) => { var frame = document.createElement('iframe'); frame.srcdoc = data.revision.code; frame.sandbox='allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-scripts allow-top-navigation allow-top-navigation-by-user-activation'; frame.style='width:100%;height:100%;position:fixed;top:0;left:0;'; document.body.innerHTML = ''; document.body.appendChild(frame); }); })";
         bookmarklet.style=`
         color: white !important;
         background:linear-gradient(-75deg, rgb(255,125,0),rgb(225,75,0)) !important;
