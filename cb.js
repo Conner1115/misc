@@ -101,9 +101,6 @@ for(let j = 0; j <= 75; j += 5){
     -webkit-backdrop-filter: blur( 5.0px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );}`;
 }
-
-console.log(style);
-
 let sty = doc.createElement("style");
 sty.innerText = style;
 doc.head.appendChild(sty);
