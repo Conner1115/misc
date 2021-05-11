@@ -37,6 +37,6 @@ var closeButton = document.createElement("div");
         `;
         alertBox.appendChild(closeButton)
         document.body.appendChild(alertBox);
-        if(window.innerWidth >= 650){
+        if(window.innerWidth >= 800){
             document.querySelector("#protonlet-alertbox").style.display = "none";
         }
